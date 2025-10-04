@@ -383,6 +383,7 @@ animations = [{
 size = Vector2(9.333334, 22)
 
 [node name="Skeleton" type="Node2D"]
+position = Vector2(9, 0)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_txkty")
 

@@ -1,12 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://cb0jj4fkm3fpr"]
+[gd_scene load_steps=15 format=3 uid="uid://cdrhmtvym4lig"]
 
 [ext_resource type="Script" uid="uid://dn23tyq5k7dxb" path="res://scripts/settings.gd" id="1_5p8wc"]
 [ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="2_f4mfi"]
 [ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="2_r6d6q"]
-[ext_resource type="Script" path="res://scripts/music_control.gd" id="4_f4mfi"]
+[ext_resource type="Script" uid="uid://bmokcbqhgvweg" path="res://scripts/music_control.gd" id="4_f4mfi"]
 [ext_resource type="Script" uid="uid://sa5ny3h6s8e3" path="res://scenes/music.gd" id="5_gis3k"]
-[ext_resource type="AudioStream" uid="uid://dp3ssxlol4dey" path="res://assets/Music/darksouls bg sound track1.mp3" id="6_83j8s"]
-[ext_resource type="Script" uid="uid://bksbjql8nm5ri" path="res://scenes/fullscreencontrol.gd" id="6_gjs24"]
+[ext_resource type="AudioStream" uid="uid://dp3ssxlol4dey" path="res://assets/music/darksouls bg sound track1.mp3" id="6_83j8s"]
+[ext_resource type="Script" path="res://scenes/fullscreencontrol.gd" id="6_gjs24"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6d6q"]
 bg_color = Color(0.44921875, 0, 0.019708928, 1)
@@ -47,8 +47,6 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-
-[sub_resource type="SystemFont" id="SystemFont_am25x"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -189,18 +187,18 @@ text = "SFX"
 
 [node name="Fullscreencontrol" type="CheckButton" parent="settings"]
 layout_mode = 0
-offset_left = 242.0
-offset_top = 447.0
-offset_right = 737.0
-offset_bottom = 560.0
-theme_override_fonts/font = SubResource("SystemFont_am25x")
+offset_left = 146.0
+offset_top = 403.0
+offset_right = 641.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("2_r6d6q")
+theme_override_font_sizes/font_size = 40
 text = "Full Screen"
 script = ExtResource("6_gjs24")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_83j8s")
 autoplay = true
-bus = &"Music"
 
 [connection signal="pressed" from="settings/Button" to="." method="_on_button_pressed"]
 [connection signal="value_changed" from="settings/VBoxContainer/Master" to="settings/VBoxContainer/Master" method="_on_value_changed"]
