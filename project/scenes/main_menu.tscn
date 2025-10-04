@@ -1,3 +1,50 @@
-[gd_scene load_steps=0 format=3 uid="uid://b7n3jgt857ay0"]
+[gd_scene load_steps=2 format=3 uid="uid://b7n3jgt857ay0"]
+
+[ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="1_l6cm7"]
 
 [node name="main menu" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(956.5, 545)
+scale = Vector2(1.0615982, 1)
+texture = ExtResource("1_l6cm7")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77800006
+anchor_right = 1.0
+anchor_bottom = 0.38200003
+offset_left = 64.23987
+offset_top = 62.0
+offset_right = -58.0
+offset_bottom = -111.56003
+grow_horizontal = 0
+
+[node name="start" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Start Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="options" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quit" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
