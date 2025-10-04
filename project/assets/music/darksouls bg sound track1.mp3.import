@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dp3ssxlol4dey"
-path="res://.godot/imported/darksouls bg sound track1.mp3-6223a9c30d5733c8eeb0e282f605c67b.mp3str"
+path="res://.godot/imported/darksouls bg sound track1.mp3-62c980d572ad85b802f4da5a679d0801.mp3str"
 
 [deps]
 
-source_file="res://assets/music/darksouls bg sound track1.mp3"
-dest_files=["res://.godot/imported/darksouls bg sound track1.mp3-6223a9c30d5733c8eeb0e282f605c67b.mp3str"]
+source_file="res://assets/Music/darksouls bg sound track1.mp3"
+dest_files=["res://.godot/imported/darksouls bg sound track1.mp3-62c980d572ad85b802f4da5a679d0801.mp3str"]
 
 [params]
 
