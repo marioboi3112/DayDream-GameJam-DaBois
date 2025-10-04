@@ -1,15 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxqmxhs8yfslo"]
+[gd_scene load_steps=5 format=3 uid="uid://pqc4p0sgabn2"]
 
 [ext_resource type="PackedScene" uid="uid://tr07027xi50p" path="res://scenes/Player.tscn" id="1_ibkli"]
 [ext_resource type="Script" uid="uid://b54a13pssibee" path="res://scripts/player.gd" id="2_qbsmt"]
+[ext_resource type="PackedScene" uid="uid://nkq1abtnuygn" path="res://scenes/skeleton.tscn" id="3_cpr0p"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
+distance = -91.0
 
 [node name="Game" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_ibkli")]
-position = Vector2(143, -9)
+position = Vector2(-15, -18)
 script = ExtResource("2_qbsmt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(143, -9)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+=======
+zoom = Vector2(5, 5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2, 7)
+shape = SubResource("WorldBoundaryShape2D_qbsmt")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Skeleton" parent="." instance=ExtResource("3_cpr0p")]
+position = Vector2(51, 57)
+>>>>>>> b66f364abf3e3c960535b4d3e0f74d7a006dfe86
