@@ -1,7 +1,7 @@
-[gd_scene load_steps=57 format=3 uid="uid://nkq1abtnuygn"]
+[gd_scene load_steps=58 format=3 uid="uid://ca403oyj7qfqb"]
 
 [ext_resource type="Texture2D" uid="uid://nnsrdrml57j2" path="res://assets/tilesets/Skeleton/Sprite Sheets/Skeleton Idle.png" id="1_pbvs3"]
-[ext_resource type="Script" uid="uid://b0y6yck5ux0fl" path="res://scripts/skeleton.gd" id="1_txkty"]
+[ext_resource type="Script" path="res://scripts/skeleton.gd" id="1_txkty"]
 [ext_resource type="Texture2D" uid="uid://cslinrcap7but" path="res://assets/tilesets/Skeleton/Sprite Sheets/Skeleton Attack.png" id="2_5pgwy"]
 [ext_resource type="Texture2D" uid="uid://dd4n6xwoexst1" path="res://assets/tilesets/Skeleton/Sprite Sheets/Skeleton Walk.png" id="3_ivqcw"]
 [ext_resource type="Texture2D" uid="uid://fs330khgeop" path="res://assets/tilesets/Skeleton/Sprite Sheets/Skeleton Hit.png" id="3_ssl1b"]
@@ -379,6 +379,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pgwy"]
+size = Vector2(9.333334, 22)
+
 [node name="Skeleton" type="Node2D"]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_txkty")
@@ -394,11 +397,13 @@ frame_progress = 0.5741129
 [node name="RayCast2DRight" type="RayCast2D" parent="."]
 position = Vector2(10, 21.333336)
 rotation = -1.5768496
-target_position = Vector2(-0.7635058, 15.99567)
+target_position = Vector2(-2.7836456, 19.316837)
 
 [node name="RayCast2DLeft" type="RayCast2D" parent="."]
 position = Vector2(9.333332, 21.999998)
 rotation = 1.5428838
-target_position = Vector2(-0.7635058, 15.99567)
+target_position = Vector2(-0.5023575, 17.992985)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.666667, 24.333334)
+shape = SubResource("RectangleShape2D_5pgwy")

@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc53n6q0v0gax"]
+[gd_scene load_steps=8 format=3 uid="uid://chuvahhog60af"]
 
 [ext_resource type="PackedScene" uid="uid://tr07027xi50p" path="res://scenes/Player.tscn" id="1_ibkli"]
 [ext_resource type="Script" uid="uid://b54a13pssibee" path="res://scripts/player.gd" id="2_qbsmt"]
-[ext_resource type="PackedScene" uid="uid://nkq1abtnuygn" path="res://scenes/skeleton.tscn" id="3_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://ca403oyj7qfqb" path="res://scenes/skeleton.tscn" id="3_cpr0p"]
 [ext_resource type="Texture2D" uid="uid://b61k1kdxuvopu" path="res://assets/tilesets/textures_02_08_25.png" id="3_lbhrr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
@@ -763,7 +763,7 @@ sources/0 = SubResource("TileSetAtlasSource_iywne")
 [node name="Game" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_ibkli")]
-position = Vector2(-56, 55)
+position = Vector2(-412, 70)
 script = ExtResource("2_qbsmt")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -781,7 +781,7 @@ shape = SubResource("WorldBoundaryShape2D_qbsmt")
 position = Vector2(1, 0)
 tile_set = SubResource("TileSet_p57ef")
 format = 2
-layer_0/tile_data = PackedInt32Array(262149, 0, 23, 262150, 0, 23, 262151, 0, 23, 262148, 0, 23, 262147, 0, 23, 262146, 0, 23, 262145, 0, 23, 262144, 0, 23, 327679, 0, 23, 327678, 0, 23, 327677, 0, 23, 327676, 0, 23, 327675, 0, 23, 327674, 0, 23, 327673, 0, 23, 327672, 0, 23, 327671, 0, 23, 327670, 0, 23, 327669, 0, 23, 262152, 0, 23, 262153, 0, 23)
+layer_0/tile_data = PackedInt32Array(262149, 0, 23, 262150, 0, 23, 262151, 0, 23, 262148, 0, 23, 262147, 0, 23, 262146, 0, 23, 262145, 0, 23, 262144, 0, 23, 327679, 0, 23, 327678, 0, 23, 327677, 0, 23, 327676, 0, 23, 327675, 0, 23, 327674, 0, 23, 327673, 0, 23, 327672, 0, 23, 327671, 0, 23, 327670, 0, 23, 327669, 0, 23, 262152, 0, 23, 262153, 0, 23, 327668, 0, 23, 327667, 0, 23, 327666, 0, 23, 327665, 0, 23, 327664, 0, 23, 327663, 0, 23, 327662, 0, 23, 327661, 65536, 23, 327660, 65536, 23, 327659, 65536, 23, 327658, 65536, 23, 327657, 65536, 23, 327656, 65536, 23, 327655, 65536, 23, 327654, 0, 23, 327653, 0, 23, 262120, 65536, 23, 262121, 65536, 23, 196585, 65536, 23, 196586, 65536, 23, 262122, 65536, 23, 262123, 65536, 23, 131050, 65536, 23, 196587, 65536, 23, 262124, 65536, 23, 262119, 0, 23, 196584, 0, 23, 131049, 0, 23, 131051, 0, 23, 65514, 0, 23, 196588, 0, 23, 262125, 0, 23)
 
 [node name="Skeleton" parent="." instance=ExtResource("3_cpr0p")]
-position = Vector2(72, 10.000001)
+position = Vector2(71, 11)
