@@ -9,6 +9,7 @@
 position = Vector2(143, -9)
 script = ExtResource("2_qbsmt")
 
-[node name="Camera2D" type="Camera2D" parent="player"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(143, -9)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true

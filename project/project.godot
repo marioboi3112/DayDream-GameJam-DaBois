@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="uid://bxqmxhs8yfslo"
 
+[autoload]
+
+TransitionScreen="*res://scenes/transition_screen.tscn"
+
 [display]
 
 window/size/viewport_width=1920
