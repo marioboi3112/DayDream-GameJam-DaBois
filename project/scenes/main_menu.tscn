@@ -1,19 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7n3jgt857ay0"]
+[gd_scene load_steps=6 format=3 uid="uid://b7n3jgt857ay0"]
 
+[ext_resource type="Script" uid="uid://c3162we6h7sbp" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="2_ekxnf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 draw_center = false
+border_color = Color(0.8, 0.8, 0.8, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="main menu" type="CanvasLayer"]
+[node name="main menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bqqt6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(956.5, 545)
@@ -21,9 +27,14 @@ scale = Vector2(1.0615982, 1)
 texture = ExtResource("1_l6cm7")
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1849.0
+offset_top = 14.0
+offset_right = 1849.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -104,3 +115,7 @@ theme_override_font_sizes/font_size = 56
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bqqt6")
 text = "Quit"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
