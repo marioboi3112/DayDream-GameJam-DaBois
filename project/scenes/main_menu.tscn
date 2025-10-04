@@ -180,7 +180,6 @@ color = Color(0.20860833, 1.6199006e-06, 0.00076300476, 1)
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_8ln24")
 autoplay = true
-bus = &"music"
 
 [connection signal="pressed" from="Panel/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
