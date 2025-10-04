@@ -86,11 +86,11 @@ size = Vector2(16, 38)
 [node name="player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -41)
+position = Vector2(0, -43)
 sprite_frames = SubResource("SpriteFrames_d3wef")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.6892706
+frame_progress = 0.0758312
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, -21)
