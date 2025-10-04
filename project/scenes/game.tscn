@@ -6,7 +6,7 @@
 [node name="Game" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_ibkli")]
-position = Vector2(55, 59)
+position = Vector2(143, -9)
 script = ExtResource("2_qbsmt")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
