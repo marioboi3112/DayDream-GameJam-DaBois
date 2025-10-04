@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://phcwkf7fo5ga"]
 
-[ext_resource type="Texture2D" uid="uid://eejoldtpqlkr" path="res://assets/inventory.png" id="1_dgki8"]
+[ext_resource type="Texture2D" uid="uid://eejoldtpqlkr" path="res://assets/inventory.png" id="1_qw0r6"]
 
 [node name="Inventory" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_dgki8")
+texture = ExtResource("1_qw0r6")
