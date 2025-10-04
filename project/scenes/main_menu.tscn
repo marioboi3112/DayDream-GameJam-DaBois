@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7n3jgt857ay0"]
+[gd_scene load_steps=7 format=3 uid="uid://b7n3jgt857ay0"]
 
-[ext_resource type="Script" uid="uid://c3162we6h7sbp" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="2_ekxnf"]
 
@@ -15,6 +15,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Curve" id="Curve_bqqt6"]
+_data = [Vector2(0.023255825, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.123595595), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="main menu" type="Control"]
 layout_mode = 3
@@ -115,6 +119,42 @@ theme_override_font_sizes/font_size = 56
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bqqt6")
 text = "Quit"
+
+[node name="Particle" type="Node" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Particle"]
+position = Vector2(650, 548)
+amount = 100
+lifetime = 1.3
+explosiveness = 0.19
+fixed_fps = 57
+emission_shape = 3
+emission_rect_extents = Vector2(20, 1)
+initial_velocity_min = 2.0
+initial_velocity_max = 2.0
+linear_accel_min = 4.0
+linear_accel_max = 4.0
+scale_amount_min = 6.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_bqqt6")
+color = Color(0.20860833, 1.6199006e-06, 0.00076300476, 1)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Particle"]
+position = Vector2(834, 551)
+amount = 100
+lifetime = 1.3
+explosiveness = 0.19
+fixed_fps = 57
+emission_shape = 3
+emission_rect_extents = Vector2(20, 1)
+initial_velocity_min = 2.0
+initial_velocity_max = 2.0
+linear_accel_min = 4.0
+linear_accel_max = 4.0
+scale_amount_min = 6.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_bqqt6")
+color = Color(0.20860833, 1.6199006e-06, 0.00076300476, 1)
 
 [connection signal="pressed" from="Panel/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
