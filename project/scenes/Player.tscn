@@ -85,6 +85,8 @@ animations = [{
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(72.99999, -26.75)
+scale = Vector2(2.3, 2.6187499)
 sprite_frames = SubResource("SpriteFrames_o4126")
 animation = &"idle"
 autoplay = "idle"
