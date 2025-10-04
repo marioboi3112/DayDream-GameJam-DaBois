@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdrhmtvym4lig"]
+[gd_scene load_steps=11 format=3 uid="uid://cdrhmtvym4lig"]
 
 [ext_resource type="Script" uid="uid://dn23tyq5k7dxb" path="res://scripts/settings.gd" id="1_5p8wc"]
+[ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="2_f4mfi"]
 [ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="2_r6d6q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6d6q"]
@@ -24,6 +25,25 @@ corner_radius_bottom_left = 20
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4mfi"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_r6d6q"]
+color = Color(0.3529412, 0.3529412, 0.3529412, 1)
+grow_begin = 0.0
+thickness = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gis3k"]
+bg_color = Color(0.44664928, 0.607986, 0.45156324, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83j8s"]
+bg_color = Color(0.44705883, 0.60784316, 0.4509804, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="Settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -33,15 +53,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5p8wc")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(967, 540)
+scale = Vector2(1.0599334, 1)
+texture = ExtResource("2_f4mfi")
+
 [node name="settings" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 359.0
+offset_top = 316.0
+offset_right = -378.77783
+offset_bottom = -99.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="title" type="Label" parent="settings"]
+[node name="SETTINGS" type="Label" parent="settings"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -55,9 +84,9 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="settings"]
 layout_mode = 0
-offset_left = 1830.0
+offset_left = 1092.0
 offset_top = 1.0
-offset_right = 1919.0
+offset_right = 1181.0
 offset_bottom = 112.0
 theme_override_fonts/font = ExtResource("2_r6d6q")
 theme_override_font_sizes/font_size = 60
@@ -66,5 +95,23 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_es4n0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6wm04")
 theme_override_styles/focus = SubResource("StyleBoxFlat_f4mfi")
 text = "X"
+
+[node name="volume" type="HSlider" parent="settings"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 328.0
+offset_top = -132.5
+offset_right = 879.0
+offset_bottom = -91.5
+grow_vertical = 2
+theme_override_constants/center_grabber = 0
+theme_override_constants/grabber_offset = 0
+theme_override_constants/tick_offset = 0
+theme_override_styles/slider = SubResource("StyleBoxLine_r6d6q")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gis3k")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_83j8s")
+value = 50.0
 
 [connection signal="pressed" from="settings/Button" to="." method="_on_button_pressed"]
