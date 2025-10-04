@@ -1,9 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://b7n3jgt857ay0"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://c3162we6h7sbp" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="2_ekxnf"]
 [ext_resource type="FontFile" uid="uid://dgva8av78s6gu" path="res://fonts/OldeTome.ttf" id="3_wu84c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wu84c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -16,6 +18,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ln24"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rtw2f"]
 
 [sub_resource type="Curve" id="Curve_bqqt6"]
 _data = [Vector2(0.023255825, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.123595595), 0.0, 0.0, 0, 0]
@@ -83,6 +89,7 @@ theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wu84c")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bqqt6")
 text = "Start Game"
@@ -105,6 +112,7 @@ theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ln24")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bqqt6")
 text = "Settings"
@@ -127,6 +135,7 @@ theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rtw2f")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bqqt6")
 text = "Quit"
