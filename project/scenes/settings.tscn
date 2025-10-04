@@ -1,16 +1,17 @@
 [gd_scene load_steps=2 format=3 uid="uid://cdrhmtvym4lig"]
 
-[ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://dn23tyq5k7dxb" path="res://scripts/settings.gd" id="1_5p8wc"]
 
-[node name="settings" type="Control"]
+[node name="Settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5p8wc")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,14 +19,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 173.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("1_5p8wc")
-theme_override_font_sizes/font_size = 100
-text = "Settings"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="volume2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "mute"
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/volume" to="." method="_on_volume_value_changed"]
