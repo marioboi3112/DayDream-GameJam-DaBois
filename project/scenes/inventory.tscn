@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://oddbyf7oasnv"]
+[gd_scene load_steps=0 format=3 uid="uid://oddbyf7oasnv"]
 
 [node name="Inventory" type="Node2D"]
 
