@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 [gd_scene load_steps=11 format=3 uid="uid://b7n3jgt857ay0"]
->>>>>>> a4d4e255b330b0eff4387447cab6fab1420e1073
-=======
-[gd_scene load_steps=7 format=3 uid="uid://b7n3jgt857ay0"]
->>>>>>> parent of ea93287 (settings)
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="1_l6cm7"]
