@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://buc3jxq2h44ax"]
+[gd_scene load_steps=14 format=3 uid="uid://dxc44ym434ck2"]
 
 [ext_resource type="Texture2D" uid="uid://cvk4tgvvsoc3r" path="res://assets/tilesets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Idle.png" id="1_owtlo"]
 
@@ -89,7 +89,8 @@ size = Vector2(14.5, 35)
 position = Vector2(1, 9)
 sprite_frames = SubResource("SpriteFrames_nabqu")
 animation = &" idle"
-frame_progress = 0.3687121
+autoplay = " idle"
+frame_progress = 0.94879603
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3.25, 31)
