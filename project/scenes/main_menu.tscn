@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7n3jgt857ay0"]
+[gd_scene load_steps=7 format=3 uid="uid://b7n3jgt857ay0"]
 
 [ext_resource type="Script" uid="uid://c3162we6h7sbp" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://dgva8av78s6gu" path="res://fonts/OldeTome.ttf" id="3_wu84c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -38,16 +39,26 @@ offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="name game" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = -741.0
+offset_top = 103.0
+offset_right = 33.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("3_wu84c")
+theme_override_font_sizes/font_size = 167
+text = "Obliviscera"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.77800006
 anchor_right = 1.0
 anchor_bottom = 0.38200003
-offset_left = 64.23987
-offset_top = 62.0
-offset_right = -58.0
-offset_bottom = -111.56003
+offset_left = -534.0
+offset_top = 249.0
+offset_right = -126.0
+offset_bottom = 527.0
 grow_horizontal = 0
 
 [node name="Start" type="Button" parent="Panel/VBoxContainer"]
