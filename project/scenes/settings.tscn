@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdrhmtvym4lig"]
+[gd_scene load_steps=12 format=3 uid="uid://cdrhmtvym4lig"]
 
 [ext_resource type="Script" uid="uid://dn23tyq5k7dxb" path="res://scripts/settings.gd" id="1_5p8wc"]
 [ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="2_f4mfi"]
 [ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="2_r6d6q"]
+[ext_resource type="Script" uid="uid://bmokcbqhgvweg" path="res://scripts/music_control.gd" id="4_f4mfi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6d6q"]
 bg_color = Color(0.44921875, 0, 0.019708928, 1)
@@ -96,22 +97,91 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6wm04")
 theme_override_styles/focus = SubResource("StyleBoxFlat_f4mfi")
 text = "X"
 
-[node name="volume" type="HSlider" parent="settings"]
+[node name="VBoxContainer" type="VBoxContainer" parent="settings"]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 328.0
-offset_top = -132.5
-offset_right = 879.0
-offset_bottom = -91.5
+offset_left = -273.79364
+offset_top = -122.19696
+offset_right = 273.79364
+offset_bottom = 122.19696
+grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Master" type="HSlider" parent="settings/VBoxContainer"]
+layout_mode = 2
 theme_override_constants/center_grabber = 0
 theme_override_constants/grabber_offset = 0
 theme_override_constants/tick_offset = 0
 theme_override_styles/slider = SubResource("StyleBoxLine_r6d6q")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gis3k")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_83j8s")
-value = 50.0
+min_value = -80.0
+max_value = 0.0
+script = ExtResource("4_f4mfi")
+audio_bus_name = "Master"
+
+[node name="Master" type="Label" parent="settings/VBoxContainer/Master"]
+layout_mode = 0
+offset_left = -199.31744
+offset_top = -27.30304
+offset_right = -18.317444
+offset_bottom = 32.69696
+theme_override_fonts/font = ExtResource("2_r6d6q")
+theme_override_font_sizes/font_size = 40
+text = "Master"
+
+[node name="Music" type="HSlider" parent="settings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/center_grabber = 0
+theme_override_constants/grabber_offset = 0
+theme_override_constants/tick_offset = 0
+theme_override_styles/slider = SubResource("StyleBoxLine_r6d6q")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gis3k")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_83j8s")
+min_value = -80.0
+max_value = 0.0
+script = ExtResource("4_f4mfi")
+audio_bus_name = "music"
+
+[node name="Music" type="Label" parent="settings/VBoxContainer/Music"]
+layout_mode = 0
+offset_left = -167.31744
+offset_top = -25.30304
+offset_right = -19.317444
+offset_bottom = 34.69696
+theme_override_fonts/font = ExtResource("2_r6d6q")
+theme_override_font_sizes/font_size = 40
+text = "Music"
+
+[node name="SFX" type="HSlider" parent="settings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/center_grabber = 0
+theme_override_constants/grabber_offset = 0
+theme_override_constants/tick_offset = 0
+theme_override_styles/slider = SubResource("StyleBoxLine_r6d6q")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gis3k")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_83j8s")
+min_value = -80.0
+max_value = 0.0
+script = ExtResource("4_f4mfi")
+audio_bus_name = "SFX"
+
+[node name="SFX" type="Label" parent="settings/VBoxContainer/SFX"]
+layout_mode = 0
+offset_left = -152.31744
+offset_top = -17.30304
+offset_right = -23.317444
+offset_bottom = 42.69696
+theme_override_fonts/font = ExtResource("2_r6d6q")
+theme_override_font_sizes/font_size = 40
+text = "SFX"
 
 [connection signal="pressed" from="settings/Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="settings/VBoxContainer/Master" to="settings/VBoxContainer/Master" method="_on_value_changed"]
+[connection signal="value_changed" from="settings/VBoxContainer/Music" to="settings/VBoxContainer/Music" method="_on_value_changed"]
+[connection signal="value_changed" from="settings/VBoxContainer/SFX" to="settings/VBoxContainer/SFX" method="_on_value_changed"]
