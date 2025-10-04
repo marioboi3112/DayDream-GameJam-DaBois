@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdrhmtvym4lig"]
+[gd_scene load_steps=14 format=3 uid="uid://cb0jj4fkm3fpr"]
 
 [ext_resource type="Script" uid="uid://dn23tyq5k7dxb" path="res://scripts/settings.gd" id="1_5p8wc"]
 [ext_resource type="Texture2D" uid="uid://bd5p6xcariepx" path="res://assets/Background/Screenshot 2025-10-03 214443.png" id="2_f4mfi"]
 [ext_resource type="FontFile" uid="uid://d1p4dchjtx0co" path="res://fonts/antiquity-print.ttf" id="2_r6d6q"]
-[ext_resource type="Script" uid="uid://bmokcbqhgvweg" path="res://scripts/music_control.gd" id="4_f4mfi"]
+[ext_resource type="Script" path="res://scripts/music_control.gd" id="4_f4mfi"]
+[ext_resource type="Script" uid="uid://sa5ny3h6s8e3" path="res://scenes/music.gd" id="5_gis3k"]
+[ext_resource type="AudioStream" uid="uid://dp3ssxlol4dey" path="res://assets/Music/darksouls bg sound track1.mp3" id="6_83j8s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6d6q"]
 bg_color = Color(0.44921875, 0, 0.019708928, 1)
@@ -145,8 +147,8 @@ theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gis3k")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_83j8s")
 min_value = -80.0
 max_value = 0.0
-script = ExtResource("4_f4mfi")
-audio_bus_name = "music"
+script = ExtResource("5_gis3k")
+audio_bus_name = "Music"
 
 [node name="Music" type="Label" parent="settings/VBoxContainer/Music"]
 layout_mode = 0
@@ -180,6 +182,11 @@ offset_bottom = 42.69696
 theme_override_fonts/font = ExtResource("2_r6d6q")
 theme_override_font_sizes/font_size = 40
 text = "SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_83j8s")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="settings/Button" to="." method="_on_button_pressed"]
 [connection signal="value_changed" from="settings/VBoxContainer/Master" to="settings/VBoxContainer/Master" method="_on_value_changed"]
