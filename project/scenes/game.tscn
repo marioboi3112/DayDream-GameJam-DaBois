@@ -822,7 +822,7 @@ texture = ExtResource("4_kvpfn")
 [node name="mobs" type="Node" parent="."]
 
 [node name="Skeleton" parent="mobs" instance=ExtResource("3_cpr0p")]
-position = Vector2(71, 11)
+position = Vector2(72, 27)
 
 [node name="player" parent="." instance=ExtResource("1_ibkli")]
 position = Vector2(-412, 70)
