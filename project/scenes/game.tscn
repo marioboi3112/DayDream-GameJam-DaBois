@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=16 format=3 uid="uid://b1oi0w0qlg70s"]
 
 [ext_resource type="Texture2D" uid="uid://dld31qxkp8c0q" path="res://assets/Paralax/parallax-00.png" id="1_gee14"]
@@ -869,3 +870,18 @@ position = Vector2(-21, 25)
 
 
 >>>>>>> cf7e480fe81cad835822991f45249851d116f7c1
+=======
+[gd_scene load_steps=2 format=3 uid="uid://djwe10st8n0ut"]
+
+[ext_resource type="PackedScene" uid="uid://tr07027xi50p" path="res://scenes/Player.tscn" id="1_ibkli"]
+
+[node name="game" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_ibkli")]
+position = Vector2(351, -1)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(112, -44)
+zoom = Vector2(5, 5)
+position_smoothing_enabled = true
+>>>>>>> b7a27246a0c5bba6ae115e20195be6b55544d4de
