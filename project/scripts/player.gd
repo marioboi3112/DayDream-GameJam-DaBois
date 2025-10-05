@@ -25,6 +25,7 @@ func _physics_process(delta):
 	if direction > 0 :
 		animated_sprite.flip_h = false
 	elif direction < 0:
+		
 		animated_sprite.flip_h = true
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

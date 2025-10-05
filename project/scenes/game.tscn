@@ -1,14 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1oi0w0qlg70s"]
+[gd_scene load_steps=14 format=3 uid="uid://bc53n6q0v0gax"]
 
 [ext_resource type="Texture2D" uid="uid://dld31qxkp8c0q" path="res://assets/Paralax/parallax-00.png" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://tr07027xi50p" path="res://scenes/Player.tscn" id="1_ibkli"]
 [ext_resource type="Texture2D" uid="uid://wj3lg8o1gg6o" path="res://assets/Paralax/parallax-01.png" id="2_0tnpc"]
 [ext_resource type="Script" uid="uid://b54a13pssibee" path="res://scripts/player.gd" id="2_qbsmt"]
+[ext_resource type="PackedScene" uid="uid://chaxkey0qrxql" path="res://scenes/skeleton.tscn" id="3_cpr0p"]
 [ext_resource type="Texture2D" uid="uid://b61k1kdxuvopu" path="res://assets/tilesets/textures_02_08_25.png" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bd26thptrkejr" path="res://assets/Paralax/parallax-02.png" id="3_vtaks"]
 [ext_resource type="Texture2D" uid="uid://d2prcab43fetu" path="res://assets/Paralax/parallax-03.png" id="4_kvpfn"]
-[ext_resource type="PackedScene" uid="uid://dx3xr2kmtdei7" path="res://scenes/enemy.tscn" id="9_0tnpc"]
-[ext_resource type="PackedScene" uid="uid://c7wq5tww8jm3v" path="res://scenes/killzone.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="9_vtaks"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
 distance = -91.0
@@ -820,7 +820,9 @@ script = ExtResource("2_qbsmt")
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(48, -32)
 zoom = Vector2(4, 4)
-limit_enabled = false
+limit_left = -715
+limit_top = -265
+limit_bottom = 160
 position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -842,4 +844,5 @@ position = Vector2(-300, 103)
 position = Vector2(93, 0)
 shape = SubResource("RectangleShape2D_0tnpc")
 
-[node name="Enemy" parent="." instance=ExtResource("9_0tnpc")]
+[node name="Skeleton" parent="." instance=ExtResource("3_cpr0p")]
+position = Vector2(-21, 25)
