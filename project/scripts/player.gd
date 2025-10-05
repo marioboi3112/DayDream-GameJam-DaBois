@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -330.0
 var is_attacking = false
 
 func _physics_process(delta):
-	var direction = Input.get_axis("move_left", "move_right") && is_attacking == false
+	var direction = Input.get_axis("move_left", "move_right") 
 	var dir_face: int
 	# Add the gravity.
 	if not is_on_floor():
@@ -21,8 +21,11 @@ func _physics_process(delta):
 	else:
 		animated_sprite.play("jump")
 	if Input.is_action_just_pressed("slash"):
-		animated_sprite.play("slash")
+		animated_sprite.play("attack")
 		is_attacking = true
+	else:
+		is_attacking =false
+	
 	if dir_face > 0 :
 		animated_sprite.flip_h = false
 	elif dir_face < 0:

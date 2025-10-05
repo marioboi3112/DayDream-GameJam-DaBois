@@ -1,14 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://bc53n6q0v0gax"]
+[gd_scene load_steps=14 format=3 uid="uid://b1oi0w0qlg70s"]
 
 [ext_resource type="Texture2D" uid="uid://dld31qxkp8c0q" path="res://assets/Paralax/parallax-00.png" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://tr07027xi50p" path="res://scenes/Player.tscn" id="1_ibkli"]
 [ext_resource type="Texture2D" uid="uid://wj3lg8o1gg6o" path="res://assets/Paralax/parallax-01.png" id="2_0tnpc"]
 [ext_resource type="Script" uid="uid://b54a13pssibee" path="res://scripts/player.gd" id="2_qbsmt"]
-[ext_resource type="PackedScene" uid="uid://chaxkey0qrxql" path="res://scenes/skeleton.tscn" id="3_cpr0p"]
+[ext_resource type="PackedScene" path="res://scenes/skeleton.tscn" id="3_cpr0p"]
 [ext_resource type="Texture2D" uid="uid://b61k1kdxuvopu" path="res://assets/tilesets/textures_02_08_25.png" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bd26thptrkejr" path="res://assets/Paralax/parallax-02.png" id="3_vtaks"]
 [ext_resource type="Texture2D" uid="uid://d2prcab43fetu" path="res://assets/Paralax/parallax-03.png" id="4_kvpfn"]
-[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://c7wq5tww8jm3v" path="res://scenes/killzone.tscn" id="9_vtaks"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
 distance = -91.0
@@ -798,7 +798,7 @@ position = Vector2(0, -79)
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="parallax/ParallaxBackground3/ParallaxLayer"]
-position = Vector2(4, 21)
+position = Vector2(8, 53)
 texture = ExtResource("3_vtaks")
 
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="parallax"]
@@ -807,7 +807,7 @@ texture = ExtResource("3_vtaks")
 position = Vector2(0, -46)
 
 [node name="Sprite2D" type="Sprite2D" parent="parallax/ParallaxBackground4/ParallaxLayer"]
-position = Vector2(0, -18)
+position = Vector2(3, 7)
 scale = Vector2(1, 1.2027777)
 texture = ExtResource("4_kvpfn")
 
@@ -841,7 +841,7 @@ layer_0/tile_data = PackedInt32Array(458722, 458752, 23, 524258, 589824, 23, 524
 position = Vector2(-300, 103)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(93, 0)
+position = Vector2(94, 125)
 shape = SubResource("RectangleShape2D_0tnpc")
 
 [node name="Skeleton" parent="." instance=ExtResource("3_cpr0p")]
