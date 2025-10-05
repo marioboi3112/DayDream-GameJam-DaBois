@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1oi0w0qlg70s"]
+[gd_scene load_steps=16 format=3 uid="uid://b1oi0w0qlg70s"]
 
 [ext_resource type="Texture2D" uid="uid://dld31qxkp8c0q" path="res://assets/Paralax/parallax-00.png" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://tr07027xi50p" path="res://scenes/Player.tscn" id="1_ibkli"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d2prcab43fetu" path="res://assets/Paralax/parallax-03.png" id="4_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://dx3xr2kmtdei7" path="res://scenes/enemy.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://c7wq5tww8jm3v" path="res://scenes/killzone.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://bayr2n6xc50y7" path="res://scripts/pausemenu.tscn" id="10_vtaks"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
 distance = -91.0
@@ -768,6 +769,8 @@ sources/0 = SubResource("TileSetAtlasSource_iywne")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
 size = Vector2(222, 20)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vtaks"]
+
 [node name="Game" type="Node2D"]
 
 [node name="parallax" type="Node" parent="."]
@@ -843,3 +846,12 @@ position = Vector2(93, 0)
 shape = SubResource("RectangleShape2D_0tnpc")
 
 [node name="Enemy" parent="." instance=ExtResource("9_0tnpc")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pausemenu" parent="CanvasLayer" instance=ExtResource("10_vtaks")]
+material = SubResource("ShaderMaterial_vtaks")
+offset_left = 2.0
+offset_top = 8.0
+offset_right = 2.0
+offset_bottom = 8.0
