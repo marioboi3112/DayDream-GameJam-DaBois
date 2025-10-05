@@ -813,23 +813,11 @@ texture = ExtResource("4_kvpfn")
 
 [node name="ParallaxBackground5" type="ParallaxBackground" parent="parallax"]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="parallax/ParallaxBackground5"]
-position = Vector2(-98.00001, 443)
-scale = Vector2(0.8662365, -1.4877697)
-
-[node name="Sprite2D" type="Sprite2D" parent="parallax/ParallaxBackground5/ParallaxLayer"]
-position = Vector2(0, -18)
-scale = Vector2(1, 1.2027777)
-texture = ExtResource("4_kvpfn")
-
 [node name="mobs" type="Node" parent="."]
 
-<<<<<<< HEAD
-=======
 [node name="Skeleton" parent="mobs" instance=ExtResource("3_cpr0p")]
 position = Vector2(72, 27)
 
->>>>>>> 42fe84a629d506c06e5eeabea496bb2734815116
 [node name="player" parent="." instance=ExtResource("1_ibkli")]
 position = Vector2(-412, 70)
 script = ExtResource("2_qbsmt")
@@ -839,6 +827,7 @@ position = Vector2(48, -32)
 zoom = Vector2(4, 4)
 limit_enabled = false
 position_smoothing_enabled = true
+
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
