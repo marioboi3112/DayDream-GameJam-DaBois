@@ -1,0 +1,3 @@
+[gd_scene load_steps=0 format=3 uid="uid://d1hfxw84wcvdt"]
+
+[node name="KillZone" type="Area2D"]
