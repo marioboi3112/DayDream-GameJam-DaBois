@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -330.0
 
 
 func _physics_process(delta):
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("move_right", "move_left")
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
