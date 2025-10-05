@@ -131,7 +131,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -145,7 +145,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 10.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -184,19 +184,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0vlq"]
-size = Vector2(26, 38)
+size = Vector2(17, 38)
 
 [node name="player" type="CharacterBody2D" groups=["PLAYER1"]]
-collision_layer = 2
-collision_mask = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -43)
 sprite_frames = SubResource("SpriteFrames_d3wef")
 animation = &"idle"
 autoplay = "run"
-frame_progress = 0.6634159
+frame_progress = 0.4294271
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -21)
+position = Vector2(-5, -22)
 shape = SubResource("RectangleShape2D_p0vlq")
