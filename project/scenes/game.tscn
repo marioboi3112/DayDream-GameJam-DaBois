@@ -813,11 +813,6 @@ texture = ExtResource("4_kvpfn")
 
 [node name="ParallaxBackground5" type="ParallaxBackground" parent="parallax"]
 
-[node name="mobs" type="Node" parent="."]
-
-[node name="Skeleton" parent="mobs" instance=ExtResource("3_cpr0p")]
-position = Vector2(72, 27)
-
 [node name="player" parent="." instance=ExtResource("1_ibkli")]
 position = Vector2(-412, 70)
 script = ExtResource("2_qbsmt")
@@ -827,7 +822,6 @@ position = Vector2(48, -32)
 zoom = Vector2(4, 4)
 limit_enabled = false
 position_smoothing_enabled = true
-
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
