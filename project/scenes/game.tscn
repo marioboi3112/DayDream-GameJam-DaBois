@@ -848,17 +848,24 @@ position = Vector2(94, 125)
 shape = SubResource("RectangleShape2D_0tnpc")
 
 <<<<<<< HEAD
-[node name="Enemy" parent="." instance=ExtResource("9_0tnpc")]
+[node name="Skeleton" parent="." instance=ExtResource(3)]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+position = Vector2(-21, 25)
 
-[node name="pausemenu" parent="CanvasLayer" instance=ExtResource("10_vtaks")]
-material = SubResource("ShaderMaterial_vtaks")
+
+[node name="pausemenu" parent="CanvasLayer" instance=ExtResource(10)]
+material = SubResource(1)  # <- use correct ID
 offset_left = 2.0
 offset_top = 8.0
 offset_right = 2.0
 offset_bottom = 8.0
+
+[node name="Skeleton" parent="." instance=ExtResource(3)]
+position = Vector2(-21, 25)
+
 =======
 [node name="Skeleton" parent="." instance=ExtResource("3_cpr0p")]
 position = Vector2(-21, 25)
+
+
 >>>>>>> cf7e480fe81cad835822991f45249851d116f7c1
